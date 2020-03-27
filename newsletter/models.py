@@ -594,7 +594,6 @@ class Submission(models.Model):
             subject, text,
             from_email=self.newsletter.get_sender(),
             to=[subscription.get_recipient()],
-            headers=self.extra_headers,
         )
 
         if self.message.html_template:
